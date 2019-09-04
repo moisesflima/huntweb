@@ -21,6 +21,8 @@ export default class Main extends Component{
         this.setState({products: response.data.docs});
     };
     
+    prevpage = () => {}
+    nextPage = () => {}
     
     render(){
 
@@ -37,8 +39,8 @@ export default class Main extends Component{
                     </article>                    
                 ))}
                 <div className="actions">
-                    <button>Anterior</button>
-                    <button>Próximo</button>
+                    <button onClick={this.prevPage}>Anterior</button>
+                    <button onClick={this.nextPage}>Próximo</button>
                 </div>                
             </div>
         );
